@@ -1,0 +1,2 @@
+shell basic commands assignment
+
