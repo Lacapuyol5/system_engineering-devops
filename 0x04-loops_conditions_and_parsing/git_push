@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Step 1: Add all changes
+git add .
+
+# Step 2: Commit with a message
+echo "Enter commit message:"
+read message
+git commit -m "$message"
+
+# Step 3: Push to the repository
+git push origin main  # Change 'main' to 'master' or your branch name if different
+
