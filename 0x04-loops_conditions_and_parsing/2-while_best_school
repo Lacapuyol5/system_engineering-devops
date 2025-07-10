@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#this is a while loop which displays "Best School" 10 times
+display=1
+while [[ $display -le 10 ]];
+do
+echo "Best School"
+display=$((display + 1))
+done
