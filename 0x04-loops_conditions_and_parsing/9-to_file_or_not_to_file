@@ -1,4 +1,4 @@
- #!/usr/bin/env bash
+#!/usr/bin/env bash
 #implementation of file manipulation using if and else statements
  if [ -e "$school" ]; then
    echo " school file exists "
