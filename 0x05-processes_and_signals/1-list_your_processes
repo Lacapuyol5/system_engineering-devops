@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 #Write a Bash script that displays a list of currently running processes with the following specific requirements:
 
-echo "USER"
-ps -eo user= | sort | uniq
+pstree -p
