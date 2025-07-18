@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# shellcheck disable=SC2009
+
+# Find the PID(s) of the 4-to_infinity_and_beyond process
+pid=$(ps aux | grep "[4]-to_infinity_and_beyond" | awk '{print $2}')
+
+# Check if PID was found
+if [ -n "$pid" ]; then
+  echo "Killing process ID: $pid"
+  kill "$pid"
+else
+  echo "4-to_infinity_and_beyond process not found."
+fi
