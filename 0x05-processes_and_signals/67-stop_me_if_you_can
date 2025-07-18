@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# shellcheck disable=SC2009
+#!/bin/bash
+
+# Find and send SIGTERM to the 7-highlander process quietly
+pkill -f 7-highlander
+
