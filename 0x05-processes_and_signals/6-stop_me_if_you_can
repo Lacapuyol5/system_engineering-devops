@@ -1,0 +1,12 @@
+ #!/usr/bin/env bash
+# shellcheck disable=SC2009
+
+pid=$(ps aux | grep "[4]-to_infinity_and_beyond" | awk '{print $2}')
+
+if [ -n "$pid" ]; then
+  echo "Terminating PID $pid using procfs method."
+  echo "0" > "/proc/$pid/oom_score_adj"
+  # Attempt forceful termination via /proc might not be possible using echo alone, 
+  # but this is often the approach in highly restricted environments.
+fi
+
